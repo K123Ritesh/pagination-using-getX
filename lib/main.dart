@@ -56,8 +56,8 @@ class ItemsListView extends StatelessWidget {
                 ),
                 padding: EdgeInsets.symmetric(horizontal: 5, vertical: 10),
                 child: ListTile(
-                  title: Text(item['title']),
-                  subtitle: Text(item['description']),
+                  title: Text(item['title'] ?? 'Data Missing'),
+                  subtitle: Text(item['description'] ?? 'Data Missing'),
                   leading: Image.asset(
                     item['image_url'],
                     errorBuilder: (context, error, stackTrace) {
